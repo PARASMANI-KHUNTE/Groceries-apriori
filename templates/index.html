@@ -1,0 +1,21 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Association Rules</title>
+</head>
+<body>
+    <h1>Association Rules</h1>
+    {% for rule in rules %}
+        <div>
+            <p>Rule: If you buy {{ rule.antecedents }}, then you are likely to buy {{ rule.consequents }}</p>
+            <p>Support: {{ rule.support }}</p>
+            <p>Confidence: {{ rule.confidence }}</p>
+            <p>Lift: {{ rule.lift }}</p>
+            <hr>
+        </div>
+    {% endfor %}
+</body>
+</html>
